@@ -7,7 +7,7 @@ RSpec.describe 'As A Visitor' do
     @turing_machine = @foxy.machines.create!(location: 'Turing')
 
     @candy = @turing_machine.snacks.create!(name: 'candy', price: 1.50)
-    @chips = @turing_mahcing.snacks.create!(name: 'chips', price: 1.00)
+    @chips = @turing_machine.snacks.create!(name: 'chips', price: 1.00)
   end
 
   it 'shows each snack name and price associated with the vending machine' do
