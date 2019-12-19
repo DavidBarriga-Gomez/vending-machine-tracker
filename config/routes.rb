@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   resources :owners do
     resources :machines, only: [:index]
+    # get '/:id', to: 'machine#show'
   end
 
-  resources :machines, only: [:show]
+  resources :machines, only: [:show] do
+    # get '/:id', to: 'machine#show'
+  end
+
+  # get '/machine/:id', to: 'machine#show'
 end

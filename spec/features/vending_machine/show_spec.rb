@@ -11,7 +11,7 @@ RSpec.describe 'As A Visitor' do
   end
 
   it 'shows each snack name and price associated with the vending machine' do
-    visit "/vending_machine/#{@turing_machine.id}"
+    visit "/machines/#{@turing_machine.id}"
 
     expect(page).to have_content(@candy.name)
     expect(page).to have_content(@candy.price)
