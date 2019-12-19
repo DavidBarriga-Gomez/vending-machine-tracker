@@ -1,3 +1,4 @@
 class MachineSnack < ApplicationRecord
-
-end 
+  belongs_to :machine
+  belongs_to :snack
+end
