@@ -10,5 +10,9 @@ Rails.application.routes.draw do
     # get '/:id', to: 'machine#show'
   end
 
+  resources :snacks, only: [:show] do
+
+  end 
+
   # get '/machine/:id', to: 'machine#show'
 end
