@@ -7,3 +7,5 @@
   <p>Price: <%= snack.price %></p>
   <br>
 <% end %>
+
+<p>Average Price Of Snacks <%= @machine.snacks.average(:price) %></p>

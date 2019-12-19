@@ -18,12 +18,15 @@ RSpec.describe 'As A Visitor' do
     expect(page).to have_content(@chips.name)
     expect(page).to have_content(@chips.price)
   end
+
+  it 'shows average price of all machine snacks' do
+    visit "/machines/#{@turing_machine.id}"
+
+    expect(@turing_machine.average).to eq(1.25)
+  end
 end
 
 
-#
-# User Story 1 of 3
-#
 # As a visitor
 # When I visit a vending machine show page
-# I see the name of all of the snacks associated with that vending machine along with their price
+# I also see an average price for all of the snacks in that machine

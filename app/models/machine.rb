@@ -7,4 +7,8 @@ class Machine < ApplicationRecord
   has_many :snacks, through: :machine_snacks
 
   validates_presence_of :location
+
+  def average
+    snacks.average(:price)
+  end
 end
